@@ -31,7 +31,9 @@ module.exports = {
         },
         container: {
             padding: {
+                DEFAULT: '8px',
                 mobile: '8px',
+                tablet: '8px',
                 laptop: '128px',
             },
         },

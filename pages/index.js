@@ -26,15 +26,15 @@ export default function Home() {
             <Frame>
                 <Navbar />
 
-                <div className='flex flex-col justify-center items-center min-h-screen mobile:-mt-20 laptop:-mt-10 -mb-10'>
+                <div className='flex flex-col justify-center items-center min-h-screen mobile:-mt-20 tablet:-mt-10 -mb-10'>
                     <div className='text-center'>
-                        <h1 className='mobile:text-xl laptop:text-2xl text-accent font-bold inter'>
+                        <h1 className='text-xl tablet:text-2xl text-accent font-bold inter'>
                             HELLO THERE!
                         </h1>
-                        <p className='mobile:text-4xl laptop:text-6xl font-bold inter text-white mt-4'>
+                        <p className='text-4xl tablet:text-6xl font-bold inter text-white mt-4'>
                             Im a Front-End Developer
                         </p>
-                        <p className='mobile:text-sm laptop:text-base font-light inter italic text-[#A9A9A9] mt-3'>
+                        <p className='text-sm tablet:text-base font-light inter italic text-[#A9A9A9] mt-3'>
                             Based on Surabaya, Indonesia
                         </p>
                     </div>

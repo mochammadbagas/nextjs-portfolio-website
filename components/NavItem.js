@@ -5,7 +5,10 @@ export default function NavItem(props) {
     const { children } = props;
 
     return (
-        <Link {...props} className='text-white'>
+        <Link
+            {...props}
+            className='text-gray-200 text-center font-semibold hover:text-white'
+        >
             {children}
         </Link>
     );

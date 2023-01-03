@@ -1,27 +1,58 @@
-import Image from 'next/image';
-import Link from 'next/link';
 import React from 'react';
+import { useState } from 'react';
 import BtnOutline from './BtnOutline';
-import NavItem from './NavItem';
+import Image from 'next/image';
+import Logo from './Logo';
+import Nav from './Nav';
+import classnames from 'classnames';
 
 export default function Navbar() {
+    const [offcanvas, setOffcanvas] = useState(false);
+
     return (
-        <div className='flex items-center pt-10'>
-            <div className='w-3/12 flex justify-start'>
-                <Link href='/'>
-                    <Image src='/logo.svg' alt='logo' width={40} height={40} />
-                </Link>
-            </div>
-            <div className='w-6/12'>
-                <div className='flex space-x-16 justify-center'>
-                    <NavItem href='/project'>Projects</NavItem>
-                    <NavItem href='/article'>Articles</NavItem>
-                    <NavItem href='/about'>About</NavItem>
+        <>
+            <div className='flex items-center pt-10'>
+                <div className='w-3/12 flex justify-start'>
+                    <Logo />
+                </div>
+                <div className='w-6/12 hidden tablet:block'>
+                    <Nav />
+                </div>
+                <div className='w-3/12 text-right hidden tablet:block'>
+                    <BtnOutline href='/contact'>Contact</BtnOutline>
+                </div>
+
+                <div className='w-9/12 text-right tablet:hidden'>
+                    <Image
+                        src='/menu.svg'
+                        alt='menu'
+                        width={32}
+                        height={32}
+                        className='inline-block'
+                        onClick={() => setOffcanvas(true)}
+                    />
                 </div>
             </div>
-            <div className='w-3/12 flex justify-end text-white'>
-                <BtnOutline href='/contact'>Contact</BtnOutline>
+
+            <div
+                className={classnames(
+                    'fixed bg-gray-900 z-10 top-0 w-full h-screen transition-all tablet:hidden',
+                    offcanvas ? 'right-0' : '-right-full'
+                )}
+            >
+                <div className='bg-pattern h-full'>
+                    <Image
+                        src='/close.svg'
+                        alt='menu'
+                        width={32}
+                        height={32}
+                        className='absolute right-8 top-10'
+                        onClick={() => setOffcanvas(false)}
+                    />
+
+                    <Nav className='flex-col space-y-10 pt-24' />
+                </div>
             </div>
-        </div>
+        </>
     );
 }
