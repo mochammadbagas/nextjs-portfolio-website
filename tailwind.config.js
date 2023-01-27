@@ -30,10 +30,11 @@ module.exports = {
             // => @media (min-width: 1280px) { ... }
         },
         container: {
+            center: 'true',
             padding: {
-                DEFAULT: '8px',
-                mobile: '8px',
-                tablet: '8px',
+                DEFAULT: '0px',
+                mobile: '0px',
+                tablet: '0px',
                 laptop: '128px',
             },
         },

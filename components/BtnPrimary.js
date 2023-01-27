@@ -2,11 +2,12 @@ import Link from 'next/link';
 import React from 'react';
 
 export default function BtnPrimary(props) {
-    const { children } = props;
+    const { className = 'px-8', children } = props;
     return (
         <Link {...props}>
-            <div className='absolute -inset-1 top-1 right-1 bg-white'></div>
-            <div className='bg-accent px-4 py-2 m-auto font-bold flex relative'>
+            <div
+                className={`${className} bg-accent text-center py-2 uppercase font-semibold`}
+            >
                 {children}
             </div>
         </Link>

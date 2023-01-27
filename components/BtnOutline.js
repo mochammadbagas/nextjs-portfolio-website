@@ -2,11 +2,11 @@ import Link from 'next/link';
 import React from 'react';
 
 export default function BtnOutline(props) {
-    const { children } = props;
+    const { className = 'px-4', children } = props;
     return (
         <Link
             {...props}
-            className='border border-accent text-accent hover:border-opacity-0 hover:text-black hover:font-medium hover:bg-accent px-5 py-2'
+            className={`${className} border border-accent text-accent text-center font-semibold uppercase hover:border-opacity-0 hover:text-black hover:bg-accent py-[6px]`}
         >
             {children}
         </Link>

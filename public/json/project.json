@@ -1,0 +1,30 @@
+[
+    {
+        "id": "1",
+        "image": "/img/2.jpg",
+        "title": "Indo Arena",
+        "desc": "Landing page of IndoArena created using NextJS",
+        "alt": "Indo Arena Image"
+    },
+    {
+        "id": "2",
+        "image": "/img/3.jpg",
+        "title": "Gojek",
+        "desc": "Landing page of Gojek created using ReactJS",
+        "alt": "Gojek Image"
+    },
+    {
+        "id": "3",
+        "image": "/img/2.jpg",
+        "title": "Indo Arena",
+        "desc": "Landing page of IndoArena created using NextJS",
+        "alt": "Indo Arena Image"
+    },
+    {
+        "id": "4",
+        "image": "/img/3.jpg",
+        "title": "Gojek",
+        "desc": "Landing page of Gojek created using ReactJS",
+        "alt": "Gojek Image"
+    }
+]

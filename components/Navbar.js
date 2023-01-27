@@ -15,10 +15,10 @@ export default function Navbar() {
                 <div className='w-3/12 flex justify-start'>
                     <Logo />
                 </div>
-                <div className='w-6/12 hidden tablet:block'>
+                <div className='w-7/12 hidden tablet:block'>
                     <Nav />
                 </div>
-                <div className='w-3/12 text-right hidden tablet:block'>
+                <div className='w-2/12 text-xs text-right tracking-widest hidden tablet:block'>
                     <BtnOutline href='/contact'>Contact</BtnOutline>
                 </div>
 

@@ -7,7 +7,7 @@ export default function NavItem(props) {
     return (
         <Link
             {...props}
-            className='text-gray-200 text-center font-semibold hover:text-white'
+            className='text-gray-200 text-center text-xs tracking-widest uppercase font-semibold hover:text-white'
         >
             {children}
         </Link>
