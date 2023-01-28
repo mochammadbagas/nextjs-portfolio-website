@@ -12,7 +12,9 @@ export function AppProvider({ children }) {
 
     useEffect(function () {
         async function getData() {
-            const request = await fetch(`/json/project.json`);
+            const request = await fetch(
+                `https://gist.githubusercontent.com/mochammadbagas/55ad7d299d3dcb20ab3c96fd46924a98/raw/acb52592632afcfdf6f5fbe0e8e232a10477356d/project`
+            );
             const response = await request.json();
 
             setPost(response);
